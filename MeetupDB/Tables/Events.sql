@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Events]
+(
+	[Id] INT CONSTRAINT [PK_Event] PRIMARY KEY IDENTITY, 
+    [Title] NVARCHAR(128) NOT NULL, 
+    [Topic] NVARCHAR(128) NOT NULL, 
+    [Description] NVARCHAR(512) NOT NULL, 
+    [Schedule] NVARCHAR(512) NOT NULL, 
+    [DateTime] DATETIME NOT NULL, 
+    [Place] NVARCHAR(128) NOT NULL
+)

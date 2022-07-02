@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="35fcb3e0-2954-4949-b02d-838fb646b906" ChangeDateTime="07/01/2022 11:41:51">
+    <Property Name="ElementName" Value="[dbo].[Events].[title]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Events]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Title" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="41ba19ed-6230-4692-b7f5-bde985aee144" ChangeDateTime="07/01/2022 11:53:46">
+    <Property Name="ElementName" Value="[dbo].[EventOrganizer].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[EventOrganizer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EventId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="27fb6fbd-cba1-426d-b95f-c8d58b850000" ChangeDateTime="07/01/2022 12:04:52">
+    <Property Name="ElementName" Value="[dbo].[EventSpeaker].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[EventSpeaker]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EventId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a95e399b-1a66-4159-8a92-aedb73e8beb1" ChangeDateTime="07/01/2022 16:59:11">
+    <Property Name="ElementName" Value="[dbo].[EventSpeaker].[SpeacerId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[EventSpeaker]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SpeakerId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="751bd182-904a-4862-84f2-11fbfd1a5b7b" ChangeDateTime="07/01/2022 23:32:37">
+    <Property Name="ElementName" Value="[dbo].[Users].[Password]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Users]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PasswordHash" />
+  </Operation>
+</Operations>

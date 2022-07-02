@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Users]
+(
+	[Id] UNIQUEIDENTIFIER CONSTRAINT [PK_User] PRIMARY KEY DEFAULT newid(), 
+    [Email] NVARCHAR(128) NOT NULL CONSTRAINT [UK_User_Email] UNIQUE, 
+    [PasswordHash] NVARCHAR(128) NOT NULL, 
+    [RoleId] INT NOT NULL
+)
