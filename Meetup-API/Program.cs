@@ -9,7 +9,9 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//ConnectionString
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
+//Conection
 builder.Services.AddDbContext<MeetupContext>(options => options.UseSqlServer(connection));
 
 builder.Services.AddControllers();
