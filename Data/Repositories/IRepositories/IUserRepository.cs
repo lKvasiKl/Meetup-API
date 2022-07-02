@@ -1,5 +1,4 @@
 ﻿using Data.Entities;
-using Data.IRepositories;
 
 namespace Data.Repositories.IRepositories
 {
