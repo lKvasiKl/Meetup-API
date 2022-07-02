@@ -2,10 +2,10 @@
 (
 	[EventId] INT
 		CONSTRAINT [FK_EventSpeaker_Event] FOREIGN KEY
-		REFERENCES [dbo].[Events]([Id]) ON DELETE CASCADE,
+		REFERENCES [dbo].[Events]([Id]) ON DELETE NO ACTION,
     [SpeakerId] INT
-		CONSTRAINT [FK_EventSpeacer_Speaker] FOREIGN KEY
-		REFERENCES [dbo].[Speakers]([Id]) ON DELETE CASCADE,
+		CONSTRAINT [FK_EventSpeaker_Speaker] FOREIGN KEY
+		REFERENCES [dbo].[Speakers]([Id]) ON DELETE NO ACTION,
 	CONSTRAINT [PK_EventSpeaker] PRIMARY KEY ([EventId],[SpeakerId])
 )
 GO
