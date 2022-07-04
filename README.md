@@ -61,10 +61,10 @@ Register request body:
 You can use this endpoint to log in and get jwt token.  
 Initially, there are two users in the database under whose data you can log in.
 1. User with role _User_
-  "email": "user@example.com",
+  "email": "user@example.com",  
   "password": "string12"
 2. User with role _Admin_
-  "email": "admin@gmail.com",
+  "email": "admin@gmail.com",  
   "password": "12345qwerty"
 
 Log in _Admin_ responce body:
