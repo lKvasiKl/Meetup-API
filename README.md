@@ -30,7 +30,7 @@ Then select the __Clone__ button.
     ```
 4. Next, Visual Studio loads the solution(s) from the repository by using the __Folder View__  
 in Solution Explorer. You can view a solution in __Solution View__ by double-clicking its .sln file.
-5. At the top of the screen, find the __Build__ tab and clic it. Then clic __Build Solution__.  
+5. At the top of the screen, find the __Build__ tab and click it. Then click __Build Solution__.  
 Or just press __CTRL+SHIFT+B__ on your keyboard.
 
 ### Create a local database
