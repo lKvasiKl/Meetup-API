@@ -85,10 +85,7 @@
     <None Include="MeetupDB.publish.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="PostDeploymentSql.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </PostDeploy>
-    <PostDeploy Include="PostDeploymentScript.sql">
+    <PostDeploy Include="PostDeploymentSkript.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </PostDeploy>
   </ItemGroup>
