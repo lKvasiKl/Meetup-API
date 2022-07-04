@@ -23,7 +23,10 @@ Registered users can have one of the following roles: User or Admin.
 1. Open Visual Studio.
 2. On the start window, select __Clone a repository__.
 3. Copy the URL below and paste into __Repository location__.  
-Then select the __Clone__ button
-4. Next, Visual Studio loads the solution(s) from the repository by using the ___Folder View__  
+Then select the __Clone__ button.
+    ```
+    https://github.com/lKvasiKl/Meetup-API.git
+    ```
+4. Next, Visual Studio loads the solution(s) from the repository by using the __Folder View__  
 in Solution Explorer. You can view a solution in __Solution View__ by double-clicking its .sln file.  
 Or, you can select the __Switch Views__ button, and then select __Program.cs__ to view a solution's code.
