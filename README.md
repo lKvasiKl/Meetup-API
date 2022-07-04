@@ -1,6 +1,6 @@
 # Meetup-API #
 Modsen test task. CRUD Web API for working with events.  
-Runs on .Net Core using EF Core, MS SQL, AutoMapper, FluentValidation and Swagger.
+Runs on .Net Core using EF Core, MS SQL, AutoMapper, FluentValidation and Swagger.  
 Authentication in the application is carried out through a bearer token.
 
 # About #
@@ -90,9 +90,10 @@ If you have an account with the _User_ role, you can only use __GET__ requests.
 If you have an account with the _Admin_ role, you can use all endpoints.  
 
 ### [POST] /Event
-Endpoint for adding a new event. One event can have several organizers and ыpeakers.  
+Endpoint for adding a new event in DB. One event can have several organizers and ыpeakers.  
 To add, their name is indicated. They must also exist in the database.  
-Date and time must be written in the format `yyyy-dd-mmThh-mm`
+Date and time must be written in the format `yyyy-dd-mmThh-mm`  
+>We cannot add a new event with an organizer (speaker) that is not in the database.  
 
 Add event request body:
 ```
@@ -123,10 +124,35 @@ Add event request body:
 Endpoint to receive all events.
 
 ### [GET] /Event/{id}
-Endpoint to receive event by its id.
+Endpoint to receive event by id.
 
 ### [PUT] /Event/{id}
-Endpoint for editing an event by its id. Contains exactly the same request body as for adding event.
+Endpoint for editing an event by id. Contains exactly the same request body as for adding event.
 
 ### [DELETE] /Event/{id}
-Deletes the user with the specified id.
+Deletes the event with the specified id.
+
+## Organizer
+Auxiliary endpoints available only to users with the _Admin_ role.  
+
+### [POST] /Organizer
+Endpoint for adding new organizer in DB.
+
+Add organizer request body:
+```
+{
+  "name": "The Best Organizer"
+}
+```
+
+### [GET] /Organizer
+Endpoint to receive all organizers.
+
+### [GET] /Organizer/{id}
+Endpoint to receive organizer by id.
+
+### [PUT] /Organizer/{id}
+Endpoint for editing an organizer by id. Contains exactly the same request body as for adding organizer.
+
+### [DELETE] /Organizer/{id}
+Deletes the organizer with the specified id.
