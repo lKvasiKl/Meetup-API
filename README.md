@@ -60,10 +60,10 @@ Register request body:
 ### [POST] /Auth/Login
 You can use this endpoint to log in and get jwt token.  
 Initially, there are two users in the database under whose data you can log in.
-1. User with role _User_
+1. User with role _User_  
   "email": "user@example.com",  
   "password": "string12"
-2. User with role _Admin_
+2. User with role _Admin_  
   "email": "admin@gmail.com",  
   "password": "12345qwerty"
 
