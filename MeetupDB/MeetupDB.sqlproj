@@ -87,4 +87,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </PostDeploy>
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostDeploymentSql.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </PostDeploy>
+  </ItemGroup>
 </Project>
