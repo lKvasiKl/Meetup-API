@@ -156,3 +156,28 @@ Endpoint for editing an organizer by id. Contains exactly the same request body 
 
 ### [DELETE] /Organizer/{id}
 Deletes the organizer with the specified id.
+
+## Speaker
+Auxiliary endpoints available only to users with the _Admin_ role.  
+
+### [POST] /Speaker
+Endpoint for adding new speaker in DB.
+
+Add speaker request body:
+```
+{
+  "name": "The Best Speaker"
+}
+```
+
+### [GET] /Speaker
+Endpoint to receive all speakers.
+
+### [GET] /Speaker/{id}
+Endpoint to receive speaker by id.
+
+### [PUT] /Speaker/{id}
+Endpoint for editing a speaker by id. Contains exactly the same request body as for adding speaker.
+
+### [DELETE] /Speaker/{id}
+Deletes the speaker with the specified id.
