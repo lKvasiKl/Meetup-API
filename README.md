@@ -1,6 +1,6 @@
 # Meetup-API #
 Modsen test task. CRUD Web API for working with events.  
-Runs on .Net Core using EF Core, MS SQL, AutoMapper, FluentValidation and Swagger.
+Runs on .Net Core using EF Core, MS SQL, AutoMapper, FluentValidation and Swagger.  
 Authentication in the application is carried out through a bearer token.
 
 # About #
