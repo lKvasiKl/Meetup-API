@@ -79,11 +79,16 @@
     <None Include="Scripts\EventsScript.sql" />
     <None Include="Scripts\EventSpeaker.sql" />
     <None Include="Scripts\EventOrganizer.sql" />
-    <None Include="MeetupDB.publish.xml" />
+    <None Include="MeetupDB.publish.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="MeetupDB.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeploymentSql.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </PostDeploy>
+    <PostDeploy Include="PostDeploymentScript.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </PostDeploy>
   </ItemGroup>
