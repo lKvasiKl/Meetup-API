@@ -46,7 +46,7 @@ After starting the project, Swagger opens up for you.
 Now you are an unauthorized user and only `Auth` endpoints are available to you.  
 
 ## Auth
-### [POST] /Register
+### [POST] /Auth/Register
 You can use this endpoint to register a new profile.  
 All new users have the role _User_.
 
@@ -57,7 +57,7 @@ Register request body:
   "password": "string"
 }
 ```
-### [POST] /Login
+### [POST] /Auth/Login
 You can use this endpoint to log in and get jwt token.  
 Initially, there are two users in the database under whose data you can log in.
 1. User with role _User_
@@ -84,4 +84,49 @@ After you have received the jwt token, you need copy it and use it for Authoriza
 Click on the __Authorize__ button at the top of the Swagger window.  
 In the window that opens, write `bearer insert_jwt`, where _insert_jwt_ - copied jwt token.
 
+## Event
+This block contains the main endpoints of the application.  
+If you have an account with the _User_ role, you can only use __GET__ requests. 
+If you have an account with the _Admin_ role, you can use all endpoints.  
 
+### [POST] /Event
+Endpoint for adding a new event. One event can have several organizers and ыpeakers.  
+To add, their name is indicated. They must also exist in the database.  
+Date and time must be written in the format `yyyy-dd-mmThh-mm`
+
+Add event request body:
+```
+{
+  "title": "string",
+  "topic": "string",
+  "description": "string",
+  "schedule": "string",
+  "dateTime": "2022-07-04T14:30",
+  "place": "string",
+  "organizers": [
+    {
+      "name": "Organizer One"
+    }
+  ],
+  "speakers": [
+    {
+      "name": "Speaker Four"
+    }
+    {
+      "name": "Speaker Two"
+    }
+  ]
+}
+```
+
+### [GET] /Event
+Endpoint to receive all events.
+
+### [GET] /Event/{id}
+Endpoint to receive event by its id.
+
+### [PUT] /Event/{id}
+Endpoint for editing an event by its id. Contains exactly the same request body as for adding event.
+
+### [DELETE] /Event/{id}
+Deletes the user with the specified id.
