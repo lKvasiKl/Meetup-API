@@ -72,9 +72,6 @@
     <RefactorLog Include="MeetupDB.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="MeetupDB.publish.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Scripts\Roles.sql" />
     <None Include="Scripts\Speakers.sql" />
     <None Include="Scripts\Organizers.sql" />
@@ -82,6 +79,9 @@
     <None Include="Scripts\EventsScript.sql" />
     <None Include="Scripts\EventSpeaker.sql" />
     <None Include="Scripts\EventOrganizer.sql" />
+    <None Include="MeetupDB.publish.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="MeetupDB.publish.xml" />
   </ItemGroup>
   <ItemGroup>
