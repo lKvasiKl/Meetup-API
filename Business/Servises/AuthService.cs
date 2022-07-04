@@ -30,7 +30,7 @@ namespace Business.Servises
                 throw new NotAuthenticatedException("User with that credentials already exists.");
             }
             var roles = await _roleRepository.GetAllAsync();
-            var userRole = roles.First(role => role.Name == Roles.User.ToString());
+            var userRole = roles.First(role => role.Name == Policy.ForUserOnly);
 
             user = new User
             {
@@ -62,7 +62,7 @@ namespace Business.Servises
             {
                 new Claim("Id", user.Id.ToString()),
                 new Claim("Email", user.Email),
-                new Claim("Role", user.Role.Name)
+                new Claim(ClaimTypes.Role, user.Role.Name)
             };
 
             return claims;

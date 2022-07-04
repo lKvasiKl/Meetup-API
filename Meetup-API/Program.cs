@@ -1,24 +1,27 @@
+using Business.Extensions;
 using Data;
 using Meetup_API.Extantions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using FluentValidation.AspNetCore;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//ConnectionString
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
-//Conection
 builder.Services.AddDbContext<MeetupContext>(options => options.UseSqlServer(connection));
+
+builder.Services.AddFluentValidation(v => v.RegisterValidatorsFromAssembly(typeof(Program).Assembly));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddSwaggerGen(options =>
 {
-    options.AddSecurityDefinition("oauth", new OpenApiSecurityScheme
+    options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
     {
         Description = "Standard Authorization header using the Bearer scheme (\"bearer {token}\")",
         In = ParameterLocation.Header,
@@ -30,6 +33,7 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper(typeof(Program)).AddBusinessMapper();
 builder.Services.AddRepositories();
 builder.Services.AddServises();
 

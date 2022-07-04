@@ -11,6 +11,9 @@ namespace Meetup_API.Extantions
         {
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IEventRepository, EventRepository>();
+            services.AddScoped<IOrganizerRepository, OrganizerRepository>();
+            services.AddScoped<ISpeakerRepository, SpeakerRepository>();
 
             return services;
         }
@@ -19,6 +22,9 @@ namespace Meetup_API.Extantions
         {
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IOrganizerService, OrganizerService>();
+            services.AddScoped<ISpeakerService, SpeakerService>();
+            services.AddScoped<IEventService, EventService>();
 
             return services;
         }
