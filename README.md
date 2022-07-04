@@ -20,7 +20,7 @@ Registered users can have one of the following roles: User or Admin.
 + delete event (organizer, speaker).
 
 # Project start instructions #
-#### Open and build the project
+### Open and build the project
 1. Open Visual Studio.
 2. On the start window, select __Clone a repository__.
 3. Copy the URL below and paste into __Repository location__.  
@@ -33,11 +33,11 @@ in Solution Explorer. You can view a solution in __Solution View__ by double-cli
 5. At the top of the screen, find the __Build__ tab and clic it. Then clic __Build Solution__.  
 Or just press __CTRL+SHIFT+B__ on your keyboard.
 
-#### Create a local database
+### Create a local database
 1. Find the __MeetupDB__ folder and expand it.  
 2. Then find the file __MeetupDB.publish.xml__ and double-clicking it.  
 3. In the window that appears, click the __Publish__ button.
 
-#### Run the project
+### Run the project
 Now you can click on the __Run project button__ or click __F5__ on your keyboard.
 
