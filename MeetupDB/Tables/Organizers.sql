@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[Organizers]
 (
-	[Id] INT CONSTRAINT [PK_Organizer] PRIMARY KEY IDENTITY, 
+	[Id] INT CONSTRAINT [PK_Organizer] PRIMARY KEY IDENTITY(1,1), 
     [Name] NVARCHAR(128) NOT NULL CONSTRAINT [UK_Organizer_Name] UNIQUE
 )
