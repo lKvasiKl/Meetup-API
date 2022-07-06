@@ -24,12 +24,10 @@ namespace Data.EntitiesConfig
                 "EventOrganizer",
                 right => right.HasOne<Organizer>()
                               .WithMany()
-                              .HasForeignKey("OrganizerId")
-                              .OnDelete(DeleteBehavior.NoAction),
+                              .HasForeignKey("OrganizerId"),
                 left => left.HasOne<Event>()
                             .WithMany()
-                            .HasForeignKey("EventId")
-                            .OnDelete(DeleteBehavior.NoAction),
+                            .HasForeignKey("EventId"),
                 join =>
                 {
                     join.HasKey("EventId", "OrganizerId");
@@ -42,12 +40,10 @@ namespace Data.EntitiesConfig
                 "EventSpeker",
                 right => right.HasOne<Speaker>()
                               .WithMany()
-                              .HasForeignKey("SpeakerId")
-                              .OnDelete(DeleteBehavior.NoAction),
+                              .HasForeignKey("SpeakerId"),
                 left => left.HasOne<Event>()
                             .WithMany()
-                            .HasForeignKey("EventId")
-                            .OnDelete(DeleteBehavior.NoAction),
+                            .HasForeignKey("EventId"),
                 join =>
                 {
                     join.HasKey("EventId", "SpeakerId");
